@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1265409986632175804}
   - component: {fileID: 4961328073501141382}
-  - component: {fileID: 6326193562096073075}
+  - component: {fileID: 3981931602753166374}
   m_Layer: 0
   m_Name: Bolt_Bullet
   m_TagString: Untagged
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6326193562096073075
+--- !u!114 &3981931602753166374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,7 +97,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3880874732554454089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25d24f3d096df49ad95b6fc5fb89f3a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 60af25ef1ebae47d895c9db1edf36529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  damage: 2

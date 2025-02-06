@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float speed = 1f;
-    [SerializeField] private int damage;
-    private Enemy target;
+    [SerializeField] protected float speed = 1f;
+    [SerializeField] protected int damage;
+    protected Enemy target;
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (target == null) return;
 
@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
         this.target = target;
     }
 
-    private void FaceEnemy()
+    protected virtual void FaceEnemy()
     {
         Vector3 direction = target.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
-    private void DoDamage()
+    protected virtual void DoDamage()
     {
         target.TakeDamage(damage);
         Destroy(gameObject);
